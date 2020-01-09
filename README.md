@@ -4,7 +4,7 @@
  
  |Column|Type|Options|
  |------|----|-------|
- |user_id|integer|null: false, forgin_key: true|
+ |user_id|integer|null: false, foregin_key: true|
  |group_id|integer|null: false, foregin_key: true|
  
  ### Association
@@ -21,7 +21,7 @@
 
 ### Association
  - has_many :messages
- - has_many :users_group
+ - has_many :users_groups
  - has_many :groups,through: :users_groups
 
 ## messageテーブル
