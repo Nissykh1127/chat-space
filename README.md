@@ -28,8 +28,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null.false|
-|image|string|null.false|
+|body|text|
+|image|string|
 |user_id|integer|user, foregin_key:true|
 |group_id|inteder|group,foregin_key:true|
 
