@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+height: 100vh;
+width: 100vw;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+.chat-side {
+  background-color: #2f3e51;
+  width: 300px;
+  height: 100vh;
+  .side-header {
+    background-color:#253141 ;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+    .side-box {
+    width: 260px;
+    justify-content: space-between;
+    height: 20px;
+    font-size: 16px;
+    display: flex;
+    color: white;   
+    }
+    a {
+      color: #ffffff;
+    }
+    .side-group {
+      padding: 20px 20px 0px 20px;
+      font-size: 15px;
+      color:#ffffff;
+      font-weight: bold;
+    }
+    .side-message {
+      padding: 5px 20px 40px 20px ;
+      font-size: 11px;
+      color:#ffffff;
+      font-weight: bold;
+      }
+      .side-group {
+        padding: 20px 20px 0px 20px;
+        font-size: 15px;
+        color:#ffffff;
+      font-weight: bold;
+      }
+      .side-message {
+        padding: 5px 20px 40px 20px ;
+        font-size: 11px;
+        color:#ffffff;
+        font-weight: bold;
+  }
+}
+
+.chat-main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  .main-header {
+    background-color: #ffffff;
+    height: 100px;
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+  }
+  .header-leftbox {
+    padding-top: 35px;
+    .heder-group {
+      font-size: 20px;
+      color: #333333;
+    }
+    .header-member {
+      color: #999999;
+      font-size: 12px;
+    }
+  }
+    .heder-group {
+      padding-bottom: 15px;
+  }
+    .header-editbox {
+      color:#38aef0;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      font-size: 16px;
+      border: 1px solid;
+      a {
+        text-decoration: none;
+      }
+    }
+  &-view {
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 90px);
+    .main-view {
+      padding: 35px 0 0 40px;
+    }
+    .chat-text {
+      display: flex;
+      .view-name {
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 12px;
+      }
+      .view-data {
+        font-size: 12px;
+        color: #999999;
+        padding: 0 0 0 5px;
+      }
+
+    }
+    .view-text {
+      font-size: 14px;
+      color: #434A54;
+      margin-bottom: 46px;
+    }
+  }
+  &-form {
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+
+    .text-form {
+      display: flex;
+      .input-box {
+        display: flex;
+        position: relative;
+        width: 100%;
+        &-text {
+          height: 50px;
+          color: red;
+          border-style: none ;
+          padding: 0 40px 0 10px;
+          width: 100%;
+        }
+
+        &-image {
+          position: absolute;
+          cursor: pointer;
+          font-size: 1.3rem;
+          top: 10px;
+          right: 10px;
+        
+        
+          &-file {
+          display: none;
+        }
+      }
+    }
+        .submit-btn {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
