@@ -1,0 +1,27 @@
+.chat-main
+  .main-header 
+    .header-leftbox
+      .heder-group Group
+      .header-member Member:kyo
+    .header-editbox
+      = link_to "Edit", "#"
+  .chat-main-view
+    .main-view
+      .chat-text
+        .view-name kyo
+        .view-data 12345
+      .chat-view
+        .view-text Hello
+      .chat-text
+        .view-name kyo
+        .view-data 12345
+      .chat-view
+        .view-text Hello
+  .chat-main-form
+    .text-form
+      .input-box
+        %input{type:  "text",class: "input-box-text", placeholder:  "type a message"}
+        %label{class: "input-box-image"}
+          =icon('fas',  'image')
+        %input{type: "file", class: "input-box-image-file"}   
+      %input{type:"submit", class: "submit-btn"} 
