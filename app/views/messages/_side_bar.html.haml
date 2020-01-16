@@ -1,6 +1,6 @@
 .chat-side
-  .side-header
-    .side-box
+  .chat-side-header
+    .chat-side-header-box
       .side-box-user-name
         =current_user.name
       .side-box-menu
@@ -11,8 +11,8 @@
   .side-group
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
