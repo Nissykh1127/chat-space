@@ -14,14 +14,13 @@ display: flex;
   background-color: #2f3e51;
   width: 300px;
   height: 100vh;
-  .side-header {
+  &-header {
     background-color:#253141 ;
     height: 100px;
     display: flex;
     align-items: center;
     padding: 0 20px;
-  }
-    .side-box {
+  &-box {
     width: 260px;
     justify-content: space-between;
     height: 20px;
@@ -29,9 +28,23 @@ display: flex;
     display: flex;
     color: white;   
     }
-    a {
-      color: #ffffff;
-    }
+  }
+  &-box {
+  width: 260px;
+  justify-content: space-between;
+  height: 20px;
+  font-size: 16px;
+  display: flex;
+  color: white;   
+  }
+  a {
+    color: #ffffff;
+  }
+    .group {
+      padding: 20px 20px 40px 20px;
+      a {
+        text-decoration: none;
+      }
     .side-group {
       padding: 20px 20px 0px 20px;
       font-size: 15px;
@@ -55,6 +68,7 @@ display: flex;
         font-size: 11px;
         color:#ffffff;
         font-weight: bold;
+    }
   }
 }
 
@@ -100,7 +114,7 @@ display: flex;
     .main-view {
       padding: 35px 0 0 40px;
     }
-    .chat-text {
+    .upper-message {
       display: flex;
       .view-name {
         font-size: 16px;
@@ -110,11 +124,11 @@ display: flex;
       .view-data {
         font-size: 12px;
         color: #999999;
-        padding: 0 0 0 5px;
+        padding: 0 0 0 10px;
       }
 
     }
-    .view-text {
+    .lower-message {
       font-size: 14px;
       color: #434A54;
       margin-bottom: 46px;
@@ -124,13 +138,21 @@ display: flex;
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-
+    
     .text-form {
-      display: flex;
+      // display: flex;
       .input-box {
         display: flex;
         position: relative;
-        width: 100%;
+        .input-btn {
+          display: flex;
+        }
+
+        .new_message {
+          width: 100%;
+          display: flex;
+        }
+        
         &-text {
           height: 50px;
           color: red;
@@ -144,9 +166,9 @@ display: flex;
           cursor: pointer;
           font-size: 1.3rem;
           top: 10px;
-          right: 10px;
+          right: 120px;
         
-        
+          
           &-file {
           display: none;
         }

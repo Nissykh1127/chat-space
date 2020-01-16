@@ -1,27 +1,35 @@
 .chat-main
   .main-header 
     .header-leftbox
-      .heder-group Group
-      .header-member Member:kyo
+      .heder-group 
+        =@group.name
+      .header-member 
+        Member:
+        - @group.users.each do |user|
+          =user.name
     .header-editbox
       =link_to "Edit",edit_group_path(current_user.id)
   .chat-main-view
     .main-view
+      .messages
+        = render @messages
       .chat-text
-        .view-name kyo
-        .view-data 12345
+        .view-name
+        .view-data    
       .chat-view
-        .view-text Hello
+        .view-text 
       .chat-text
-        .view-name kyo
-        .view-data 12345
+        .view-name 
+        .view-data
       .chat-view
-        .view-text Hello
+        .view-text
   .chat-main-form
     .text-form
       .input-box
-        %input{type:  "text",class: "input-box-text", placeholder:  "type a message"}
-        %label{class: "input-box-image"}
-          =icon('fas',  'image')
-        %input{type: "file", class: "input-box-image-file"}   
-      %input{type:"submit", class: "submit-btn"} 
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'input-box-text', placeholder: 'type a message'
+          .input-btn
+            = f.label :image, class: 'input-box-image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'input-box-image-file'
+          = f.submit 'send', class: 'submit-btn'
