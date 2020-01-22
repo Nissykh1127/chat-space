@@ -97,7 +97,7 @@ var buildHTML = function(message) {
       alert('更新に失敗しました');
     });
   };
-    // if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    //   setInterval(reloadMessages, 7000);
+    if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+      setInterval(reloadMessages, 7000);
   }
 });
